@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Best Online Food Delivery Service in India | street food spencer.com </title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <img src="images/logo-removebg-preview.png" alt="street food spencer">
+    </div>
+    <ul>
+      <div class="home">
+        <span class="material-symbols-outlined">
+          home_pin
+          </span>
+          <li class="item"><a href="index.html">Home</a></li>
+      </div>
+      <div class="about">
+        <li class="item"><a href="About.html">About Us</a></li>
+      </div>
+      <div class="Food">
+        <li class="item"><a href="AddToCart/Add.html">Meals</a></li>
+        <span class="material-symbols-outlined">
+          fastfood
+          </span>
+      </div>
+      <div class="Food">
+        <li class="item"><a href="#">Reserve Table</a></li>
+        <span class="material-symbols-outlined">
+          restaurant
+          </span>
+      </div>
+      <div class="con">
+        <li class="item"><a href="Contact.html">Contact US</a></li>
+        <span class="material-symbols-outlined">
+          contacts_product
+          </span>
+      </div>
+      <div class="car">
+        <li class="item"><a href="cart.html">Cart</a></li>
+        <span class="material-symbols-outlined">
+          shopping_cart
+          </span>
+      </div>
+    </ul>
+    <div style="margin-left: auto;" id="login-p">
+      <a href="login.html">
+        <span class="material-symbols-outlined">
+          account_circle
+          </span>
+          
+    </a>
+    </div>
+  </nav>
+
+  <!-- This is for the scrolling of nav bar  -->
+  <script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY <= 50 ) {
+            navbar.classList.remove('scrolled');
+        } else {
+            navbar.classList.add('scrolled');
+        }
+    });
+</script>
+
+
+<!-- Now the code for hero section  -->
+
+
+<section class="hero" style="max-width: 100vw;height: 100vh; overflow: hidden;">
+  <div class="hero-content">
+      <div>
+          <h1><i>food <br>&nbsp zone</i></h1>
+          <div style="display: flex; margin-top: 40px;">
+              <div class="line"></div>
+              <p>Welcome to Street Food Spencer <br>Best Offers - Limited Time Only!</p>
+          </div>
+          <h4>Free Delivery : +919817748915 </h4>
+          <form class="search-form">
+            <div class="location-dropdown">
+              <select name="location">
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Lucknow">Lucknow</option>
+              </select>
+            </div>
+          <img style="position: absolute; bottom: 20px; left: 400px; width: 200px; margin-top: 200px;" src="images/Screenshot 2024-10-15 150243.png" alt="">
+
+            <div class="search-input">
+              <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+              <button type="submit">
+                  <i class="material-icons">search</i>
+                  <link rel="stylesheet"
+                      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+              </button>
+            
+          </div>
+
+          
+          </form>
+      </div>
+      <div class="item-container">
+          <div class="item-content">
+              <img src="images/istockphoto-1348318884-612x612.png" alt="">
+              <p>Mexican food<br>plate of Mexican food Tacos</p>
+          </div>
+          <div class="item-content">
+              <img src="images/istockphoto-1395140920-612x612.png" alt="">
+              <p>Peach, blueberry and arugula<br>fruit salad with cheese </p>
+          </div>
+          <div class="item-content">
+              <img src="images/shrimp-salad-on-white-plate-260nw-243964072.png" alt="">
+              <p>Fresh salad<br>fruits and greens on white wooden</p>
+          </div>
+      </div>
+  </div>
+
+  <div style="position: absolute;">
+      <div class="hero-bg">
+          <div class="hero-bg-color"></div>
+          <div class="plate-shadow"></div>
+          <div class="hero-bg-img">
+              <img src="images/istockphoto-1348318884-612x612.png" alt="">
+          </div>
+          
+      </div>
+  </div>
+  
+  <!-- <img style="position: absolute; bottom: 20px; left: 100px; width: 200px; margin-top: 100px;" src="assets/images/Screenshot 2024-10-15 150243.png" alt=""> -->
+
+</section>
+
+  <!-- Here we used the Gsap animation for animation  -->
+<script>
+
+
+  gsap.from(".hero", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.3,
+      duration: 1,
+      ease: "power2.out"
+  });
+
+// GSAP Animation for food items coming into view
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".food-item", {
+  opacity: 0,
+  y: 50,
+  duration: 0.8,
+  stagger: 0.3, // Delay between each item
+  scrollTrigger: {
+      trigger: ".food-item", // The element to trigger the animation
+      start: "top 80%", // When the element enters 80% of the viewport
+      toggleActions: "play none none none"
+  }
+});
+gsap.from(".item-content", {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  stagger: 0.3, // Time gap between each item's animation
+  ease: "power2.out",
+  delay: 0.3 // Optional: Initial delay before the items start animating
+});
+
+
+// GSAP Animation for elements coming into view (food items)
+gsap.registerPlugin(ScrollTrigger);
+
+// Animate each .food-item when it comes into view
+gsap.from(".food-item", {
+opacity: 0,
+y: 50,
+duration: 0.8,
+stagger: 0.3, // Delay between each item
+scrollTrigger: {
+  trigger: ".food-item", // The element to trigger the animation
+  start: "top 80%", // When the element enters 80% of the viewport
+  toggleActions: "play none none none"
+}
+});
+
+
+</script>
+
+
+
+<!-- This is our Service section  -->
+
+<section id="services-container">
+  <h1 class="h-primary">Our Services</h1>
+  <div id="services">
+      <div class="box">
+          <img src="images/order.png" alt="Food Ordering">
+          <h2 class="h-secondary">Food Ordering</h2>
+          <p>"Craving something delicious? Browse, order, and enjoy at the tap of a button! Discover the best dishes in town, tailored to your taste."</p>
+      </div>
+      <div class="box">
+          <img src="images/delivery_fast.png" alt="Delivery or Pickup">
+          <h2 class="h-secondary">Delivery or Pickup</h2>
+          <p>"Hot and fresh, delivered straight to your door—whenever you want it! Prefer to pick it up? Order ahead, and skip the wait!"</p>
+      </div>
+      <div class="box">
+          <img src="images/kit.png" alt="Recipe and Meal Kits">
+          <h2 class="h-secondary">Recipe and Meal Kits</h2>
+          <p>"Create restaurant-quality meals at home with our easy, ready-to-cook kits. Everything you need, delivered to your door—no shopping, no measuring, just cooking."</p>
+      </div>
+  </div>
+</section>
+
+  <section id="reviews">
+    <h2>Top Restaurants Around You</h2>
+    <div class="reviews-container">
+      <!-- Review 1 -->
+      <div class="review-box">
+        <div class="restaurant-name">The Indian Cuisine</div>
+        <img src="images/restaurant 1.jpeg" alt="Restaurant 1 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Good food, great service!</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-box">
+        <div class="restaurant-name">Chinese Wock</div>
+        <img src="images/restaurant 2.jpeg" alt="Restaurant 2 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Delicious meals delivered fast.</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-box">
+        <div class="restaurant-name">Korean Palace</div>
+        <img src="images/restaurant 3.jpeg" alt="Restaurant 3 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Fresh food, fresh experience!</p>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review-box">
+        <div class="restaurant-name"> Delicious Dessert</div>
+        <img src="images/restaurant 4.jpeg" alt="Restaurant 4 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Exceptional taste, every time.</p>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="review-box">
+        <div class="restaurant-name">Desi Chicken</div>
+        <img src="images/restaurant 5.jpeg" alt="Restaurant 5 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Great food, great vibes!</p>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="review-box">
+        <div class="restaurant-name">Dhokla Wala</div>
+        <img src="images/restaurant 6.jpeg" alt="Restaurant 6 Photo" class="restaurant-photo">
+        <p class="restaurant-tagline">Quality meals, quick delivery.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- New Food Scrolling Section starts here -->
+  <section id="food-section">
+    <h2>What's on your mind?</h2>
+    <div class="scroll-container">
+      <div class="food-item">
+        <img src="images/biryani.avif" alt="Biryani" class="image-placeholder">
+        <p>Biryani</p>
+      </div>
+      <div class="food-item">
+        <img src="images/north indian food.jpeg" alt="North Indian" class="image-placeholder">
+        <p>North Indian</p>
+      </div>
+      <div class="food-item">
+        <img src="https://media.istockphoto.com/id/1266093847/photo/indian-fish-platter-or-seafood-thali-served-in-a-steel-plate-or-over-banana-leaf.jpg?s=612x612&w=0&k=20&c=DVTUnZGHi7-2VNbfGGbcflMRHkFv0cMxH6ESwdxWSrE=" alt="South Indian" class="image-placeholder">
+        <p>South Indian</p>
+      </div>
+      <div class="food-item">
+        <img src="images/pizza.jpeg" alt="Pizzas" class="image-placeholder">
+        <p>Pizzas</p>
+      </div>
+      <div class="food-item">
+        <img src="images/2.png" alt="Burgers" class="image-placeholder">
+        <p>Burgers</p>
+      </div>
+      <div class="food-item">
+        <img src="images/cak.jpg" alt="Cakes" class="image-placeholder">
+        <p>Cakes</p>
+      </div>
+      <div class="food-item">
+        <img src="images/momoss.jpg" alt="Chinese" class="image-placeholder">
+        <p>Chinese</p>
+      </div>
+      <div class="food-item">
+        <img src="https://media.istockphoto.com/id/1400256468/photo/mix-vegetable-kathi-roll.webp?a=1&b=1&s=612x612&w=0&k=20&c=lEAqXmWXQJeaY_1dbah56qRGmRx2EukJ2u-skGVYCZ0=" alt="Rolls" class="image-placeholder">
+        <p>Rolls</p>
+      </div>
+      <div class="food-item">
+        <img src="images/salad.jpg" alt="Salads" class="image-placeholder">
+        <p>Salads</p>
+      </div>
+      <div class="food-item">
+        <img src="images/pastaa.jpg" alt="Pasta" class="image-placeholder">
+        <p>Pasta</p>
+      </div>
+      <div class="food-item">
+        <img src="images/sushi.jpeg" alt="Sushi" class="image-placeholder">
+        <p>Sushi</p>
+      </div>
+      <div class="food-item">
+        <img src="images/tacos.jpeg" alt="Tacos" class="image-placeholder">
+        <p>Tacos</p>
+      </div>
+    </div>
+  </section>
+  <!-- pick your meal  -->
+  <section class="meal-section">
+    <h2>Pick Your Meal</h2>
+    <div class="meal-container">
+      <!-- Breakfast Box -->
+      <div class="meal-box">
+        <div class="meal-info">
+          <img src="images/breakfast.jpeg" alt="Breakfast" class="meal-image">
+          <div>
+            <h4><a href="/AddToCart/Add.html" class="button-link">Breakfast</a></h4>
+            <p>Healthy & Delicious</p>
+          </div>
+        </div>
+        <p>"Start your day with our hearty breakfast options!"</p>
+      </div>
+
+      <!-- Lunch Box -->
+      <div class="meal-box">
+        <div class="meal-info">
+          <img src="images/lunch.jpeg" alt="Lunch" class="meal-image">
+          <div>
+            <h4><a href="/AddToCart/Add.html" class="button-link">Lunch</a></h4>
+            <p>Fresh & Flavorful</p>
+          </div>
+        </div>
+        <p>"Fuel up with a satisfying lunch to get through the day!"</p>
+      </div>
+
+      <!-- Dinner Box -->
+      <div class="meal-box">
+        <div class="meal-info">
+          <img src="images/dinner.jpeg" alt="Dinner" class="meal-image">
+          <div>
+            <h4><a href="/AddToCart/Add.html" class="button-link">Dinner</a></h4>
+            <p>Hearty & Filling</p>
+          </div>
+        </div>
+        <p>"End your day with a delightful dinner!"</p>
+      </div>
+
+      <!-- Snacks Box -->
+      <div class="meal-box">
+        <div class="meal-info">
+          <img src="images/snacks.jpeg" alt="Snacks" class="meal-image">
+          <div>
+            <h4><a href="/AddToCart/Add.html" class="button-link">Snacks</a></h4>
+            <p>Quick & Tasty</p>
+          </div>
+        </div>
+        <p>"Craving a snack? We've got you covered!"</p>
+      </div>
+    </div>
+  </section>
+
+
+
+ 
+  <section class="best-offers-section">
+    <h2>Best Offers</h2>
+    <div class="menu-items" id="menu-items">
+      <!-- Food items will be displayed here dynamically -->
+  </div>
+    <script>
+      const menuItemsContainer = document.getElementById('menu-items');
+
+      const menuData = [
+   {
+      name: 'Pancakes',
+      description: 'Fluffy pancakes served with maple syrup, fresh berries, and a dollop of whipped cream.',
+      price: '107.99',
+      image: 'https://plus.unsplash.com/premium_photo-1663854478296-dd00b6257021?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuY2FrZXN8ZW58MHx8MHx8fDA%3D',
+      offer: '10% off on first order!'
+   },
+   
+   {
+      name: 'French Toast',
+      description: 'Golden slices of bread soaked in egg mixture, topped with powdered sugar and fresh fruit.',
+      price: '80.99',
+      image: 'https://plus.unsplash.com/premium_photo-1663840225558-03ac41c68873?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RnJlbmNoJTIwdG9hc3R8ZW58MHx8MHx8fDA%3D',
+      offer: 'Buy 1 Get 1 Free!'
+   },
+   {
+      name: 'Omelette',
+      description: 'A fluffy omelette filled with cheese, mushrooms, spinach, and bell peppers.',
+      price: '169.99',
+      image: 'https://plus.unsplash.com/premium_photo-1667807521536-bc35c8d8b64b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      offer: 'Free drink with every order!'
+   },
+   {
+      name: 'Biryani',
+      description: 'Fragrant basmati rice cooked with marinated chicken or vegetables, served with raita.',
+      price: '510.99',
+      image: 'https://images.pexels.com/photos/7837978/pexels-photo-7837978.jpeg?auto=compress&cs=tinysrgb&w=600',
+      offer: '20% off on weekends!'
+   },
+   {
+            name: 'Greek Yogurt Parfait',
+            description: 'Layers of Greek yogurt, granola, and mixed berries, drizzled with honey.',
+            price: '255.99',
+            image: 'https://plus.unsplash.com/premium_photo-1663855531486-b8574bc255e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3JlZWslMjBZb2d1cnQlMjBQYXJmYWl0fGVufDB8fDB8fHww',
+            offer : '15% off!'
+
+    },
+   
+   
+];
+
+
+// Initialize cart from localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || []; 
+
+// Function to add item to cart
+function addToCart(item) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(item); // Add the new item to the cart
+    localStorage.setItem('cart', JSON.stringify(cart)); // Save the updated cart to localStorage
+    // updateCartCount(); // Update cart count in the navbar
+    alert(`${item.name} has been added to your cart!`); // Confirmation message
+}
+
+
+
+// Function to show menu items
+function showMenu() {
+    menuItemsContainer.innerHTML = ''; // Clear the container
+    // Loop through the entire menuData array and create HTML elements for each item
+    menuData.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('food-item');
+        itemElement.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <p class="price">${item.price}</p>
+            <div class="offer">${item.offer}</div>
+            <button class="add-to-cart-btn" data-name="${item.name}" data-price="${item.price}" data-description="${item.description}" data-image="${item.image}">Add to Cart</button>
+        `;
+
+        // Add event listener for "Add to Cart"
+        const addToCartBtn = itemElement.querySelector('.add-to-cart-btn');
+        addToCartBtn.addEventListener('click', function(event) {
+            const cartItem = {
+                name: item.name,
+                price: item.price,
+                description: item.description,
+                image: item.image,
+                offer: item.offer
+            };
+            addToCart(cartItem); // Call the function to add item to cart
+        });
+
+        // Append the food item to the container
+        menuItemsContainer.appendChild(itemElement);
+    });
+}
+
+// Call the function to show the menu when the page loads
+showMenu();
+
+    </script>
+
+
+ <!-- This is next section of top trending places  -->
+
+  <section class="collections-section">
+    <h1>Top Trending Places</h1>
+    <p>Explore the top trending spots in the city for dining, entertainment, and more.</p>
+
+    <div class="collections-grid">
+      <div class="collection-box">
+        <img src="images/trending 1.jpeg" alt="Newly Opened Places">
+        <div class="info">
+          
+          <h3><a href="https://mcdindia.com/" style="color: white;">MC Donalds</a></h3>
+
+        </div>
+      </div>
+
+      <div class="collection-box">
+        <img src="images/trending 2.jpeg" alt="Top Trending Spots">
+        <div class="info">
+          <h3><a href="https://online.kfc.co.in/" style="color: white;">KFC</a></h3>
+
+        </div>
+      </div>
+
+      <div class="collection-box">
+        <img src="images/trending 3.jpeg" alt="Best Insta-worthy Places">
+        <div class="info">
+          <h3><a href="https://www.burgerking.in/" style="color: white;">Burger King</a></h3>
+
+        </div>
+      </div>
+
+      <div class="collection-box">
+        <img src="images/trending 4.jpeg" alt="South Indian Special">
+        <div class="info">
+          <h3><a href="https://www.pizzahut.co.in/" style="color: white;">Pizza Hut</a></h3>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="section-p1">
+
+    <div class="col">
+
+      <!-- <img class="logo"  src="images/street food spencer.png" alt=""> -->
+      <h4>Contact</h4>
+
+      <p><strong>Address: </strong> Lovely Professional University , Jalandhar </p>
+
+      <p><strong>Phone:</strong> +01 2222 365 /(+91) 9817748915</p>
+      <p><strong>Hours:</strong> 10:00 18:00, Mon Sat</p>
+      
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+          <h4>Install App</h4>
+          <p>From App Store or Google Play</p>
+          <div class="row">
+          <img src="images/app.jpg" alt="">
+          <img src="images/play.jpg" alt="">
+        </div>
+          
+        <p>Secured Payment Gateways </p>
+        <img src="images/pay.png" alt="">
+        </div>
+        <div class="copyright">
+        <p>© 2024, Mahak Yadav</p>
+        </div>
+
+  </footer>
+
+</body>
+</html>

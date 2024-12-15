@@ -1,0 +1,233 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: black; /* Coral color */
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+#logo img {
+    height: 50px; /* Adjust as necessary */
+    border-radius: 30px 30px 30px 30px;
+}
+
+/* Styles for the navigation list */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0; /* Align list to the left */
+}
+
+/* Individual items within the navbar */
+#navbar .home,
+#navbar .about,
+#navbar .Food,
+#navbar .con,
+#navbar .car {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between items */
+    
+}
+
+
+#navbar .item a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#navbar .item a:hover {
+    color: #FFD700; /* Gold color on hover */
+    background-color: white;
+    border-radius: 25px; 
+
+}
+
+#navbar ul {
+    margin-left: auto;
+}
+
+
+/* Icon styling */
+.material-symbols-outlined {
+    margin-right: 1px; /* Space between icon and text */
+    font-size: 20px; /* Size of the icon */
+    color: white; /* Icon color */
+}
+
+
+
+/* Additional styling for all items to align left */
+#navbar > div,
+#navbar ul > div {
+    display: flex; /* Ensure all items use flex layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.cart-item img {
+    width: 60px;  /* Decrease the width */
+    height: 60px; /* Decrease the height */
+    border-radius: 5px;
+}
+
+
+.cart-item h3 {
+    margin: 0 10px;
+    flex-grow: 1;
+}
+
+.total-price {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.checkout-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+
+footer, footer * {
+    margin: 0;
+    padding: 0;
+    background-color:#ccc;
+    
+}
+
+/* Main Footer Styling */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 250px;
+    justify-content: space-between;
+    padding: 0; /* Remove any padding from the footer itself */
+    
+}
+
+/* Column Styling */
+footer .col {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+}
+
+/* Logo Styling */
+/* footer .logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 20%;
+} */
+
+/* Text Styling */
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+/* Hover Effects */
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Copyright Section Styling */
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    margin-top: 0; /* Remove any top margin */
+    margin-top: 20px;
+}
+
+    

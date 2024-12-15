@@ -1,0 +1,416 @@
+/* Global Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: black; /* Coral color */
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+#logo img {
+    height: 50px; /* Adjust as necessary */
+    border-radius: 30px 30px 30px 30px;
+}
+
+/* Styles for the navigation list */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0; /* Align list to the left */
+}
+
+/* Individual items within the navbar */
+#navbar .home,
+#navbar .about,
+#navbar .Food,
+#navbar .con,
+#navbar .car {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between items */
+    
+}
+
+
+#navbar .item a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#navbar .item a:hover {
+    color: #FFD700; /* Gold color on hover */
+    background-color: white;
+    border-radius: 25px; 
+
+}
+
+#navbar ul {
+    margin-left: auto;
+}
+#navbar > div,
+#navbar ul > div {
+    display: flex; /* Ensure all items use flex layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+}
+
+
+
+/* Icon styling */
+.material-symbols-outlined {
+    margin-right: 1px; /* Space between icon and text */
+    font-size: 20px; /* Size of the icon */
+    color: white; /* Icon color */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Grid Layout for Checkout Form and Cart Items */
+.checkout-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Checkout Form Styling */
+.checkout-form, .cart-items-section {
+    width: 48%;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 0.8s ease-in-out;
+}
+
+/* Form Input Styling */
+.checkout-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.checkout-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.checkout-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Payment Method Radio Buttons */
+.checkout-form h2 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    animation: fadeIn 1s ease;
+}
+
+
+
+.payment-options {
+    display: flex;
+    /* flex-direction: column; Arrange labels in a column */
+    margin-top: 1px; /* Add some margin on top */
+    margin-right: 10px;
+    
+}
+
+.payment-option {
+    display: flex; /* Create a flex container */
+    align-items: center; /* Center items vertically */
+    margin: 1px; /* Add spacing between options */
+}
+
+.payment-option input[type="radio"] {
+    margin-top: 5px; /* Space between radio button and label */
+    /* display: inline-block; Ensure proper alignment */
+}
+
+/* Optional: Styling for the labels */
+.payment-option {
+    font-size: 1rem; /* Adjust font size */
+    /* display: flex; Ensure proper flexbox usage */
+    align-items: center; /* Center items vertically */
+    margin-top: -5px;
+}
+
+
+
+/* Price Summary */
+.price-summary {
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideInRight 0.8s ease;
+}
+
+.price-summary p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.price-summary .total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Cart Items Styling */
+.cart-items-section {
+    border-left: 4px solid #007bff;
+    animation: slideInRight 0.8s ease-in-out;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 2px dashed #ddd;
+    transition: all 0.4s ease;
+}
+
+.cart-item:hover {
+    background-color: #f9f9f9;
+    transform: translateX(5px);
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cart-item img:hover {
+    transform: scale(1.1);
+}
+
+.cart-item h3 {
+    flex-grow: 1;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+.cart-item .price {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Button Styling */
+button[type="submit"], .checkout-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Modal styling */
+.modal {
+    display: none; /*Hidden by default*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#okBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#okBtn:hover {
+    background-color: #45a049;
+}
+
+
+/* Input Hover Effects */
+input:hover {
+    background-color: #f0f0f0;
+    transition: all 0.2s ease-in;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .checkout-grid {
+        flex-direction: column;
+    }
+    .checkout-form, .cart-items-section {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+footer, footer * {
+    margin: 0;
+    padding: 0;
+    background-color:#ccc;
+}
+
+/* Main Footer Styling */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0; /* Remove any padding from the footer itself */
+}
+
+/* Column Styling */
+footer .col {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Logo Styling */
+/* footer .logo {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 20%;
+} */
+
+/* Text Styling */
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+/* Hover Effects */
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Copyright Section Styling */
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    margin-top: 0; /* Remove any top margin */
+    margin-top: 20px;
+}
+
+    

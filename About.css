@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+/* #navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+} */
+
+/* #navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+} */
+
+/* Navigation Bar: Logo and Image */
+/* Overall styles for the navbar */
+/* Overall styles for the navbar */
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255); /* Background color when at the top */
+    color: black; /* Text color when at the top */
+    padding: 15px 50px; /* Increased padding at the top */
+    position: sticky;  
+    top: 0;
+    z-index: 1000; 
+    transition: background-color 0.5s, color 0.5s, padding 0.5s; /* Smooth transition for all changes */
+}
+
+/* Navbar styles when scrolled */
+#navbar.scrolled {
+    background-color: black; /* Change background color when scrolled */
+    color: white;           /* Change text color when scrolled */
+    padding: 10px 20px;    /* Default padding */
+    box-shadow: none;      /* Optional: change shadow */
+}
+
+/* Icon styling */
+.material-symbols-outlined {
+    color: black; /* Icon color when at the top */
+    transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+#navbar.scrolled .material-symbols-outlined {
+    color: white; /* Icon color when scrolled */
+}
+
+/* Logo styling */
+#logo img {
+    height: 50px; /* Adjust as necessary */
+}
+
+/* Styles for the navigation list */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0; /* Align list to the left */
+}
+
+/* Individual items within the navbar */
+#navbar .home,
+#navbar .about,
+#navbar .Food,
+#navbar .con,
+#navbar .car {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between items */
+}
+
+/* Link styles */
+#navbar .item a {
+    text-decoration: none; /* Remove underline */
+    color: rgb(0, 0, 0); /* Link color when at the top */
+    padding: 10px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Link hover styles */
+#navbar .item a:hover {
+    color: #ffffff; /* Gold color on hover */
+    background-color: black; /* Change background on hover */
+    border-radius: 25px; 
+}
+#navbar.scrolled .item a {
+    color: rgb(255, 255, 255); /* Link color when scrolled (white) */
+}
+
+/* Link hover styles when scrolled */
+#navbar.scrolled .item a:hover {
+    color: #ffffff; /* Gold color on hover */
+    background-color: black; /* Change background on hover */
+}
+/* Right-aligned items in the navbar */
+#navbar ul {
+    margin-left: auto;
+}
+
+/* Button styles */
+#navbar .item {
+    transition: color 0.3s; /* Smooth transition for item colors */
+}
+
+
+
+/* Login section */
+#login-p {
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center items vertically */
+    margin-left: auto; /* Push the login section to the right */
+}
+
+#login-p a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#login-p a:hover {
+    color: #FFD700; /* Gold color on hover */
+    background-color: #FFD700;
+    border-radius: 25px; 
+}
+
+/* Additional styling for all items to align left */
+#navbar > div,
+#navbar ul > div {
+    display: flex; /* Ensure all items use flex layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+}
+
+
+.about-us-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+  }
+  
+  .about-description {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .about-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .about-description h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #333;
+  }
+
+
+
+
+
+
+/*-----------*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: url(/images/bt3.jpg); */
+    background-color: white;
+    color: #080808;
+    margin: 0;
+    padding: 20px;
+
+}
+
+
+
+/*****************/
+.flavour {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    /* margin-top: -90px; */
+}
+
+header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 30px;
+    box-sizing: content-box;
+    size: 80%;
+}
+
+.menu-item {
+    background-color: #333; /* Darker background for menu items */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+    size: 50px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.menu-item img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 15px 15px;
+}
+
+.view-menu {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e67e22; /* Warm orange */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-menu:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+
+.client {
+    margin-top: 50px;
+    text-align: center;
+}
+.review-box {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Review Text */
+  .review-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Reviewer Info */
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .reviewer-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .reviewer-name {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .reviewer-role {
+    font-size: 0.9em;
+    color: #777;
+
+  }
+
+
+  /***/
+  footer, footer * {
+    margin: 0;
+    padding: 0;
+    background-color:#ccc;
+}
+
+/* Main Footer Styling */
+footer {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0; /* Remove any padding from the footer itself */
+}
+
+/* Column Styling */
+footer .col {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Text Styling */
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #222;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Image Styling */
+footer .install .row img {
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+
+footer .install img {
+    margin: 10px 0 15px 0;
+}
+
+/* Hover Effects */
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+/* Copyright Section Styling */
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    margin-top: 0; /* Remove any top margin */
+    margin-top: 20px;
+}

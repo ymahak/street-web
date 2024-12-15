@@ -1,0 +1,155 @@
+/* Basic styling for the login page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: black ;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling */
+#logo img {
+    height: 50px; /* Adjust as necessary */
+    border-radius: 30px 30px 30px 30px;
+}
+
+/* Styles for the navigation list */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0; /* Align list to the left */
+}
+
+/* Individual items within the navbar */
+#navbar .home,
+#navbar .about,
+#navbar .Food,
+#navbar .con,
+#navbar .car {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Spacing between items */
+    
+}
+
+
+#navbar .item a {
+    text-decoration: none; /* Remove underline */
+    color: #e67e22; /* Link color */
+    padding: 10px;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+#navbar .item a:hover {
+    color: #FFD700; /* Gold color on hover */
+    background-color: white;
+    border-radius: 25px; 
+
+}
+
+#navbar ul {
+    margin-left: auto;
+}
+
+
+/* Icon styling */
+.material-symbols-outlined {
+    margin-right: 1px; /* Space between icon and text */
+    font-size: 20px; /* Size of the icon */
+    color: white; /* Icon color */
+}
+
+
+
+/* Additional styling for all items to align left */
+#navbar > div,
+#navbar ul > div {
+    display: flex; /* Ensure all items use flex layout */
+    align-items: center; /* Center items vertically */
+    margin: 0; /* Remove default margins */
+}
+
+body {
+    
+    background: url(/images/bt3.jpg);
+    
+
+
+}
+
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin-left: 40%;
+    margin-top: 10%;
+
+}
+
+.form-container {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hides the form */
+.hidden {
+    display: none;
+}
